@@ -1,0 +1,20 @@
+﻿<Window x:Class="RecipeApp_GUI.Views.EditRecipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Recipe" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Recipe Name:" Margin="10" FontWeight="Bold" />
+        <TextBox x:Name="recipeNameTextBox" Grid.Row="0" Grid.Column="1" Margin="10" />
+
+        <TextBlock Text="Recipe Content:" Grid.Row="1" Margin="10" FontWeight="Bold" />
+        <TextBox x:Name="recipeContentTextBox" Grid.Row="1" Margin="10" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" />
+
+        <Button x:Name="saveButton" Grid.Row="2" HorizontalAlignment="Right" Margin="10" Width="100" Content="Save" Click="SaveButton_Click" />
+    </Grid>
+</Window>
